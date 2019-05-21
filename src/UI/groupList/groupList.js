@@ -8,7 +8,7 @@ const List = styled.ul`
 
 const Icon = styled.i`
   path {
-    fill: #2dbfbe;
+    fill: #3671c9;
   }
 `;
 

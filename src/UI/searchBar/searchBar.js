@@ -19,7 +19,7 @@ const style = {
 };
 
 const searchBar = props => {
-  const { label, placeholder, bText } = props;
+  const { label, placeholder, bText, value, handleChange } = props;
   return (
     <Form>
       <FormGroup>
@@ -34,6 +34,8 @@ const searchBar = props => {
           id="exampleSearch"
           placeholder={placeholder}
           style={style.input}
+          value={value} 
+          onChange={handleChange}
         />
         <Button color="primary" style={style.button}>{bText}</Button>
       </FormGroup>
@@ -44,13 +46,18 @@ const searchBar = props => {
 searchBar.defaultProps = {
   label: "Search",
   placeholder: "...",
-  bText: "Find"
+  bText: "Find",
+  value: '',
+  handleChange: () => {}
 };
 
 searchBar.propTypes = {
   label: propTypes.string.isRequired,
   placeholder: propTypes.string,
-  bText: propTypes.string.isRequired
+  bText: propTypes.string.isRequired,
+  value: propTypes.string,
+  handleChange: propTypes.func
 };
 
 export default searchBar;
+

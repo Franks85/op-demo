@@ -20,7 +20,7 @@ const link = props => {
 
 link.defaultProps = {
   href: "/",
-  color: "#2dbfbe",
+  color: "#3671c9",
   hoverColor: "#2298c6"
 };
 

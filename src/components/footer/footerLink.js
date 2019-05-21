@@ -4,10 +4,10 @@ import { Col } from "reactstrap";
 import PropTypes from "prop-types";
 
 const Link = styled.a`
-  color: #2dbfbe;
+  color: var(--cp);
   &:hover {
     text-decoration: none;
-    color: #c3bb5e;
+    color: var(--c_sec);
   }
 `;
 
