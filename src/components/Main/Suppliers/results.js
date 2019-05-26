@@ -54,7 +54,7 @@ const Field = styled.span`
 
 const results = () => {
   return (
-    <Col md={{ size: 5, offset: 1 }}>
+    <Col md={{ size: 6 }}>
       <SelectedFilters />
       <ReactiveList
         componentId="result"

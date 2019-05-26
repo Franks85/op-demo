@@ -4,29 +4,29 @@
 export const navLinkLeft = [
   {
     title: "Fornitori",
-    href: "/suppliers"
+    href: "/fornitori"
   },
   {
     title: "Lotti",
-    href: "/contracts"
+    href: "/lotti"
   },
   {
     title: "Comunicazioni",
-    href: "/publications"
+    href: "/comunicazioni"
   },
   {
     title: "Categorie",
-    href: "/category"
+    href: "/categorie"
   }
 ];
 
 export const navLinkRight = [
   {
     title: "Area Fornitori",
-    href: "/suppliers/add"
+    href: "/fornitori/login"
   },
   {
     title: "Area S.A.",
-    href: "/login"
+    href: "sa/login"
   }
 ];
