@@ -7,9 +7,15 @@ p {
 }
 
 .css-145p3ou {
-    flex-direction: column-reverse !important;
+    justify-content: space-around;
 }  
 
 .css-evf80z {
     margin: 15px 0 !important;
 }
+
+.tooltip > .tooltip-inner {
+    background-color: #fff;
+    color: #383d41;
+    border: 1px solid #ccc;
+  }

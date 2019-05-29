@@ -6,7 +6,7 @@ import {
   ResultList,
   SelectedFilters
 } from "@appbaseio/reactivesearch";
-import { Alert } from "reactstrap";
+import AlerTip from '../../../UI/alert/alerTip'
 
 const { ResultListWrapper } = ReactiveList;
 
@@ -73,7 +73,7 @@ class Results extends Component {
             marginBottom: 20
           }}
           renderResultStats={function(stats) {
-            return `${stats.numberOfResults} Lotti trovati`;
+            return `${stats.numberOfResults} Lotti trovati - Ordina per`;
           }}
           sortOptions={sortOption}
         >
@@ -82,27 +82,59 @@ class Results extends Component {
               {data.map(item => (
                 <ResultList key={item.id} style={style.resultList}>
                   <ResultList.Content>
-                    <Row className="mb-1 text-center no-gutters">
+                    <Row
+                      className="mb-1 text-center no-gutters"
+                      style={style.resultHeader}
+                    >
                       <Col>
-                        <Alert color="secondary">{item.dataInizio}</Alert>
+                        <AlerTip
+                          placement="top"
+                          tipText="Data di inizio"
+                          target={`startDate-${item.id}`}
+                          alertColor="secondary"
+                          alertText={item.dataInizio}
+                        />
+                      </Col>
+
+                      <Col>
+                        <AlerTip
+                          placement="top"
+                          tipText="Data di fine"
+                          target={`endDate-${item.id}`}
+                          alertColor="secondary"
+                          alertText={item.dataFine}
+                        />
                       </Col>
                       <Col>
                         {item.stato === "In corso" ? (
-                          <Alert color="success">{item.stato}</Alert>
+                          <AlerTip
+                            placement="top"
+                            tipText="Stato procedura"
+                            target={`statoInCorso-${item.id}`}
+                            alertColor="success"
+                            alertText={item.stato}
+                          />
                         ) : item.stato === "Non iniziato" ? (
-                          <Alert color="warning">{item.stato}</Alert>
+                          <AlerTip
+                            placement="top"
+                            tipText="Stato procedura"
+                            target={`statoNonIniziato-${item.id}`}
+                            alertColor="warning"
+                            alertText={item.stato}
+                          />
                         ) : (
-                          <Alert color="danger">{item.stato}</Alert>
+                          <AlerTip
+                            placement="top"
+                            tipText="Stato procedura"
+                            target={`statoTerminato-${item.id}`}
+                            alertColor="danger"
+                            alertText={item.stato}
+                          />
                         )}
-                      </Col>
-                      <Col>
-                        <Alert color="secondary" id="endDate">
-                          {item.dataFine}
-                        </Alert>
                       </Col>
                     </Row>
                     <ResultList.Title style={style.title}>
-                      <a href="/lotti">{item.title}</a>
+                      <a href="/contratti">{item.title}</a>
                     </ResultList.Title>
                     <ResultList.Description>
                       <div>

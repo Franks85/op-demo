@@ -68,7 +68,7 @@ const results = () => {
           marginBottom: 20
         }}
         renderResultStats={function(stats) {
-          return `${stats.numberOfResults} Fornitori trovati`;
+          return `${stats.numberOfResults} Fornitori trovati - Ordina per`;
         }}
         innerClass={{ resultsInfo: "result-list-info" }}
         sortOptions={sortOption}
