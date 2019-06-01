@@ -25,7 +25,7 @@ const footerTextElement = props => {
 
 footerTextElement.defaultProps = {
   text: "example",
-  iconName: "fas fa-envelope",
+  iconName: "fas fa-envelope"
 };
 
 footerTextElement.propTypes = {

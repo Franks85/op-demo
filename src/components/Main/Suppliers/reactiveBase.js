@@ -7,7 +7,7 @@ import {theme} from '../../../Util/ReactiveSearch/reactiveTheme'
 const reactiveBase = props => {
   const { children } = props;
   return (
-    <Container style={{ margin: "40px 0" }} fluid>
+    <Container className='reactive' fluid>
       <ReactiveBase
         app="Fornitori"
         credentials="DtOupVr1V:2a3419f7-4147-495a-b5cf-726ec269856f"

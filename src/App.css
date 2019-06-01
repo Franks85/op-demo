@@ -114,3 +114,27 @@ a:hover {
 .jumbotron {
   background-color: #f6f6f6;
 }
+
+/* Suppliers & Contracts */
+
+.reactive h2 {
+  font-size: 1.2rem !important;
+}
+
+.reactive p {
+  font-size: 1rem !important;
+}
+
+.css-145p3ou {
+  justify-content: space-around;
+}  
+
+.css-evf80z {
+  margin: 15px 0 !important;
+}
+
+.tooltip > .tooltip-inner {
+  background-color: #fff;
+  color: #383d41;
+  border: 1px solid #ccc;
+}

@@ -7,40 +7,13 @@ import {
   SelectedFilters
 } from "@appbaseio/reactivesearch";
 import AlerTip from '../../../UI/alert/alerTip'
+import {sortOption} from './sortOption'
 
 const { ResultListWrapper } = ReactiveList;
 
-const sortOption = [
-  {
-    label: "Lotto",
-    dataField: "title.keyword",
-    sortBy: "asc"
-  },
-  {
-    label: "Importo aggiudicato",
-    dataField: "importoAgg",
-    sortBy: "desc"
-  },
-  {
-    label: "Importo liquidato",
-    dataField: "importoLiq",
-    sortBy: "desc"
-  },
-  {
-    label: "Data di inizio",
-    dataField: "dataInizio.keyword",
-    sortBy: "desc"
-  },
-  {
-    label: "Data di fine",
-    dataField: "dataFine.keyword",
-    sortBy: "desc"
-  }
-];
-
 const style = {
   resultList: {
-    padding: "20px 0"
+    margin: "20px 0"
   },
   title: {
     fontSize: "1.2rem !important"
