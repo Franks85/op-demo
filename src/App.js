@@ -13,7 +13,7 @@ class App extends Component {
 
   render() {
     return (
-      <Wrapper>
+      <Wrapper data-test='app'>
         <Router>
           <div>
             <Header />

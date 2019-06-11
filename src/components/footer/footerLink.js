@@ -18,7 +18,7 @@ const Icon = styled.span`
 const footerLink = props => {
   const { href, text, iconName, icon } = props;
   return (
-    <Col>
+    <Col data-test='footer_link'>
       <Link href={href}>
         {icon && (
           <Icon>

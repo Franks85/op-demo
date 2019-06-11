@@ -46,7 +46,7 @@ class Navigation extends React.Component {
     });
 
     return (
-      <Wrapper>
+      <Wrapper data-test='navbar'>
         <Navbar light expand="md">
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
